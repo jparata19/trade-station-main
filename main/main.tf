@@ -10,6 +10,6 @@ provider "aws" {
 }
 
 module "trate-station-test" {
-    source = "https://github.com/jparata19/trade-station-common-modules//common-modules?ref=main"
+    source = "github.com/jparata19/trade-station-common-modules//common-modules?ref=main"
     bucket_name = "bull-media"
 }
