@@ -1,0 +1,582 @@
+{
+  "version": 4,
+  "terraform_version": "1.9.6",
+  "serial": 9,
+  "lineage": "c47e040d-eed9-b362-842c-83fd016db328",
+  "outputs": {},
+  "resources": [
+    {
+      "module": "module.trate-station-test",
+      "mode": "data",
+      "type": "aws_caller_identity",
+      "name": "current",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "account_id": "038462754516",
+            "arn": "arn:aws:iam::038462754516:user/jarata",
+            "id": "038462754516",
+            "user_id": "AIDAQR5EPB3KJ2QTI3X5E"
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "module": "module.trate-station-test",
+      "mode": "data",
+      "type": "aws_canonical_user_id",
+      "name": "current",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "display_name": "jparatajobs",
+            "id": "ff5768230147d514238a22578e02d03bcfdf2f3a0e8865dcac0d97daed73baea"
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "module": "module.trate-station-test",
+      "mode": "data",
+      "type": "aws_cloudfront_log_delivery_canonical_user_id",
+      "name": "current",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "c4c1ede66af53448b93c283ce9448c4ba468c9432aa01d700d3878632f77d2d0",
+            "region": null
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "module": "module.trate-station-test",
+      "mode": "managed",
+      "type": "aws_cloudfront_distribution",
+      "name": "s3_distribution",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "aliases": [],
+            "arn": "arn:aws:cloudfront::038462754516:distribution/E2AAE7BGTTQ4PV",
+            "caller_reference": "terraform-20240923171734391100000001",
+            "comment": "Some comment",
+            "continuous_deployment_policy_id": "",
+            "custom_error_response": [],
+            "default_cache_behavior": [
+              {
+                "allowed_methods": [
+                  "DELETE",
+                  "GET",
+                  "HEAD",
+                  "OPTIONS",
+                  "PATCH",
+                  "POST",
+                  "PUT"
+                ],
+                "cache_policy_id": "",
+                "cached_methods": [
+                  "GET",
+                  "HEAD"
+                ],
+                "compress": false,
+                "default_ttl": 3600,
+                "field_level_encryption_id": "",
+                "forwarded_values": [
+                  {
+                    "cookies": [
+                      {
+                        "forward": "none",
+                        "whitelisted_names": []
+                      }
+                    ],
+                    "headers": [],
+                    "query_string": false,
+                    "query_string_cache_keys": []
+                  }
+                ],
+                "function_association": [],
+                "lambda_function_association": [],
+                "max_ttl": 86400,
+                "min_ttl": 0,
+                "origin_request_policy_id": "",
+                "realtime_log_config_arn": "",
+                "response_headers_policy_id": "",
+                "smooth_streaming": false,
+                "target_origin_id": "myS3Origin",
+                "trusted_key_groups": [],
+                "trusted_signers": [],
+                "viewer_protocol_policy": "allow-all"
+              }
+            ],
+            "default_root_object": "index.html",
+            "domain_name": "dfs3g6ps6uw9n.cloudfront.net",
+            "enabled": true,
+            "etag": "E2AMGAS90HROKA",
+            "hosted_zone_id": "Z2FDTNDATAQYW2",
+            "http_version": "http2",
+            "id": "E2AAE7BGTTQ4PV",
+            "in_progress_validation_batches": 0,
+            "is_ipv6_enabled": true,
+            "last_modified_time": "2024-09-23 20:50:28.362 +0000 UTC",
+            "logging_config": [
+              {
+                "bucket": "cloudfront-logs-trade-station.s3.amazonaws.com",
+                "include_cookies": false,
+                "prefix": "cloudfront-logs"
+              }
+            ],
+            "ordered_cache_behavior": [
+              {
+                "allowed_methods": [
+                  "GET",
+                  "HEAD",
+                  "OPTIONS"
+                ],
+                "cache_policy_id": "",
+                "cached_methods": [
+                  "GET",
+                  "HEAD",
+                  "OPTIONS"
+                ],
+                "compress": true,
+                "default_ttl": 86400,
+                "field_level_encryption_id": "",
+                "forwarded_values": [
+                  {
+                    "cookies": [
+                      {
+                        "forward": "none",
+                        "whitelisted_names": []
+                      }
+                    ],
+                    "headers": [
+                      "Origin"
+                    ],
+                    "query_string": false,
+                    "query_string_cache_keys": []
+                  }
+                ],
+                "function_association": [],
+                "lambda_function_association": [],
+                "max_ttl": 31536000,
+                "min_ttl": 0,
+                "origin_request_policy_id": "",
+                "path_pattern": "/content/immutable/*",
+                "realtime_log_config_arn": "",
+                "response_headers_policy_id": "",
+                "smooth_streaming": false,
+                "target_origin_id": "myS3Origin",
+                "trusted_key_groups": [],
+                "trusted_signers": [],
+                "viewer_protocol_policy": "redirect-to-https"
+              },
+              {
+                "allowed_methods": [
+                  "GET",
+                  "HEAD",
+                  "OPTIONS"
+                ],
+                "cache_policy_id": "",
+                "cached_methods": [
+                  "GET",
+                  "HEAD"
+                ],
+                "compress": true,
+                "default_ttl": 3600,
+                "field_level_encryption_id": "",
+                "forwarded_values": [
+                  {
+                    "cookies": [
+                      {
+                        "forward": "none",
+                        "whitelisted_names": []
+                      }
+                    ],
+                    "headers": [],
+                    "query_string": false,
+                    "query_string_cache_keys": []
+                  }
+                ],
+                "function_association": [],
+                "lambda_function_association": [],
+                "max_ttl": 86400,
+                "min_ttl": 0,
+                "origin_request_policy_id": "",
+                "path_pattern": "/content/*",
+                "realtime_log_config_arn": "",
+                "response_headers_policy_id": "",
+                "smooth_streaming": false,
+                "target_origin_id": "myS3Origin",
+                "trusted_key_groups": [],
+                "trusted_signers": [],
+                "viewer_protocol_policy": "redirect-to-https"
+              }
+            ],
+            "origin": [
+              {
+                "connection_attempts": 3,
+                "connection_timeout": 10,
+                "custom_header": [],
+                "custom_origin_config": [],
+                "domain_name": "bull-media.s3.us-west-2.amazonaws.com",
+                "origin_access_control_id": "E1135FEUE5AIUM",
+                "origin_id": "myS3Origin",
+                "origin_path": "",
+                "origin_shield": [],
+                "s3_origin_config": []
+              }
+            ],
+            "origin_group": [],
+            "price_class": "PriceClass_200",
+            "restrictions": [
+              {
+                "geo_restriction": [
+                  {
+                    "locations": [
+                      "CA",
+                      "CR",
+                      "GB",
+                      "US"
+                    ],
+                    "restriction_type": "whitelist"
+                  }
+                ]
+              }
+            ],
+            "retain_on_delete": false,
+            "staging": false,
+            "status": "Deployed",
+            "tags": {},
+            "tags_all": {
+              "application": "TradeStation-test",
+              "environment": "DEV"
+            },
+            "trusted_key_groups": [
+              {
+                "enabled": false,
+                "items": []
+              }
+            ],
+            "trusted_signers": [
+              {
+                "enabled": false,
+                "items": []
+              }
+            ],
+            "viewer_certificate": [
+              {
+                "acm_certificate_arn": "",
+                "cloudfront_default_certificate": true,
+                "iam_certificate_id": "",
+                "minimum_protocol_version": "TLSv1",
+                "ssl_support_method": ""
+              }
+            ],
+            "wait_for_deployment": true,
+            "web_acl_id": ""
+          },
+          "sensitive_attributes": [],
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjEifQ==",
+          "dependencies": [
+            "module.trate-station-test.aws_cloudfront_origin_access_control.OID",
+            "module.trate-station-test.aws_s3_bucket.s3_bucket"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.trate-station-test",
+      "mode": "managed",
+      "type": "aws_cloudfront_origin_access_control",
+      "name": "OID",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "description": "OID Policy",
+            "etag": "ETVPDKIKX0DER",
+            "id": "E1135FEUE5AIUM",
+            "name": "OID",
+            "origin_access_control_origin_type": "s3",
+            "signing_behavior": "always",
+            "signing_protocol": "sigv4"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "module": "module.trate-station-test",
+      "mode": "managed",
+      "type": "aws_s3_bucket",
+      "name": "logs_bucket",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "acceleration_status": "",
+            "acl": null,
+            "arn": "arn:aws:s3:::cloudfront-logs-trade-station",
+            "bucket": "cloudfront-logs-trade-station",
+            "bucket_domain_name": "cloudfront-logs-trade-station.s3.amazonaws.com",
+            "bucket_prefix": "",
+            "bucket_regional_domain_name": "cloudfront-logs-trade-station.s3.us-west-2.amazonaws.com",
+            "cors_rule": [],
+            "force_destroy": false,
+            "grant": [
+              {
+                "id": "c4c1ede66af53448b93c283ce9448c4ba468c9432aa01d700d3878632f77d2d0",
+                "permissions": [
+                  "FULL_CONTROL"
+                ],
+                "type": "CanonicalUser",
+                "uri": ""
+              }
+            ],
+            "hosted_zone_id": "Z3BJ6K6RIION7M",
+            "id": "cloudfront-logs-trade-station",
+            "lifecycle_rule": [],
+            "logging": [],
+            "object_lock_configuration": [],
+            "object_lock_enabled": false,
+            "policy": "",
+            "region": "us-west-2",
+            "replication_configuration": [],
+            "request_payer": "BucketOwner",
+            "server_side_encryption_configuration": [
+              {
+                "rule": [
+                  {
+                    "apply_server_side_encryption_by_default": [
+                      {
+                        "kms_master_key_id": "",
+                        "sse_algorithm": "AES256"
+                      }
+                    ],
+                    "bucket_key_enabled": false
+                  }
+                ]
+              }
+            ],
+            "tags": {
+              "Name": "cloudfront_logs"
+            },
+            "tags_all": {
+              "Name": "cloudfront_logs",
+              "application": "TradeStation-test",
+              "environment": "DEV"
+            },
+            "timeouts": null,
+            "versioning": [
+              {
+                "enabled": false,
+                "mfa_delete": false
+              }
+            ],
+            "website": [],
+            "website_domain": null,
+            "website_endpoint": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxMjAwMDAwMDAwMDAwLCJkZWxldGUiOjM2MDAwMDAwMDAwMDAsInJlYWQiOjEyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MTIwMDAwMDAwMDAwMH19"
+        }
+      ]
+    },
+    {
+      "module": "module.trate-station-test",
+      "mode": "managed",
+      "type": "aws_s3_bucket",
+      "name": "s3_bucket",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "acceleration_status": "",
+            "acl": null,
+            "arn": "arn:aws:s3:::bull-media",
+            "bucket": "bull-media",
+            "bucket_domain_name": "bull-media.s3.amazonaws.com",
+            "bucket_prefix": "",
+            "bucket_regional_domain_name": "bull-media.s3.us-west-2.amazonaws.com",
+            "cors_rule": [],
+            "force_destroy": false,
+            "grant": [
+              {
+                "id": "ff5768230147d514238a22578e02d03bcfdf2f3a0e8865dcac0d97daed73baea",
+                "permissions": [
+                  "FULL_CONTROL"
+                ],
+                "type": "CanonicalUser",
+                "uri": ""
+              }
+            ],
+            "hosted_zone_id": "Z3BJ6K6RIION7M",
+            "id": "bull-media",
+            "lifecycle_rule": [],
+            "logging": [],
+            "object_lock_configuration": [],
+            "object_lock_enabled": false,
+            "policy": "{\"Id\":\"PolicyForCloudFrontPrivateContent\",\"Statement\":[{\"Action\":\"s3:GetObject\",\"Condition\":{\"StringEquals\":{\"AWS:SourceArn\":\"arn:aws:cloudfront::038462754516:distribution/E2AAE7BGTTQ4PV\"}},\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"cloudfront.amazonaws.com\"},\"Resource\":\"arn:aws:s3:::bull-media/*\",\"Sid\":\"AllowCloudFrontServicePrincipal\"}],\"Version\":\"2008-10-17\"}",
+            "region": "us-west-2",
+            "replication_configuration": [],
+            "request_payer": "BucketOwner",
+            "server_side_encryption_configuration": [
+              {
+                "rule": [
+                  {
+                    "apply_server_side_encryption_by_default": [
+                      {
+                        "kms_master_key_id": "",
+                        "sse_algorithm": "AES256"
+                      }
+                    ],
+                    "bucket_key_enabled": false
+                  }
+                ]
+              }
+            ],
+            "tags": {
+              "Environment": "Dev",
+              "Name": "bull-media"
+            },
+            "tags_all": {
+              "Environment": "Dev",
+              "Name": "bull-media",
+              "application": "TradeStation-test",
+              "environment": "DEV"
+            },
+            "timeouts": null,
+            "versioning": [
+              {
+                "enabled": false,
+                "mfa_delete": false
+              }
+            ],
+            "website": [],
+            "website_domain": null,
+            "website_endpoint": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxMjAwMDAwMDAwMDAwLCJkZWxldGUiOjM2MDAwMDAwMDAwMDAsInJlYWQiOjEyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MTIwMDAwMDAwMDAwMH19"
+        }
+      ]
+    },
+    {
+      "module": "module.trate-station-test",
+      "mode": "managed",
+      "type": "aws_s3_bucket_acl",
+      "name": "cloudfront_logs_s3_acl",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "access_control_policy": [
+              {
+                "grant": [
+                  {
+                    "grantee": [
+                      {
+                        "display_name": "awslogsdelivery+s3_us-east-1",
+                        "email_address": "",
+                        "id": "c4c1ede66af53448b93c283ce9448c4ba468c9432aa01d700d3878632f77d2d0",
+                        "type": "CanonicalUser",
+                        "uri": ""
+                      }
+                    ],
+                    "permission": "FULL_CONTROL"
+                  }
+                ],
+                "owner": [
+                  {
+                    "display_name": "jparatajobs",
+                    "id": "ff5768230147d514238a22578e02d03bcfdf2f3a0e8865dcac0d97daed73baea"
+                  }
+                ]
+              }
+            ],
+            "acl": "",
+            "bucket": "cloudfront-logs-trade-station",
+            "expected_bucket_owner": "",
+            "id": "cloudfront-logs-trade-station"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.trate-station-test.aws_s3_bucket.logs_bucket",
+            "module.trate-station-test.data.aws_canonical_user_id.current",
+            "module.trate-station-test.data.aws_cloudfront_log_delivery_canonical_user_id.current"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.trate-station-test",
+      "mode": "managed",
+      "type": "aws_s3_bucket_ownership_controls",
+      "name": "cloudfront_logs_s3_ownership",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "bucket": "cloudfront-logs-trade-station",
+            "id": "cloudfront-logs-trade-station",
+            "rule": [
+              {
+                "object_ownership": "BucketOwnerPreferred"
+              }
+            ]
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.trate-station-test.aws_s3_bucket.logs_bucket"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.trate-station-test",
+      "mode": "managed",
+      "type": "aws_s3_bucket_policy",
+      "name": "cloudfront_s3_access",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "bucket": "bull-media",
+            "id": "bull-media",
+            "policy": "{\"Id\":\"PolicyForCloudFrontPrivateContent\",\"Statement\":[{\"Action\":\"s3:GetObject\",\"Condition\":{\"StringEquals\":{\"AWS:SourceArn\":\"arn:aws:cloudfront::038462754516:distribution/E2AAE7BGTTQ4PV\"}},\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"cloudfront.amazonaws.com\"},\"Resource\":\"arn:aws:s3:::bull-media/*\",\"Sid\":\"AllowCloudFrontServicePrincipal\"}],\"Version\":\"2008-10-17\"}"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.trate-station-test.aws_cloudfront_distribution.s3_distribution",
+            "module.trate-station-test.aws_cloudfront_origin_access_control.OID",
+            "module.trate-station-test.aws_s3_bucket.s3_bucket",
+            "module.trate-station-test.data.aws_caller_identity.current"
+          ]
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}
